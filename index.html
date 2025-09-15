@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Temperature Converter</h1>
+
+    <section class="card">
+      <form id="converter-form" aria-describedby="help">
+        <label for="temp-input">Temperature value</label>
+        <input id="temp-input" name="temp" type="text" inputmode="decimal" placeholder="e.g. 36.6" autocomplete="off" />
+
+        <div class="row">
+          <div class="field">
+            <label for="from-unit">From</label>
+            <select id="from-unit" name="from">
+              <option value="c">Celsius (°C)</option>
+              <option value="f">Fahrenheit (°F)</option>
+              <option value="k">Kelvin (K)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="to-unit">To</label>
+            <select id="to-unit" name="to">
+              <option value="f">Fahrenheit (°F)</option>
+              <option value="c">Celsius (°C)</option>
+              <option value="k">Kelvin (K)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="convert-btn" type="submit">Convert</button>
+          <button id="swap-btn" type="button" title="Swap units">Swap</button>
+          <button id="clear-btn" type="button">Clear</button>
+        </div>
+
+        <p id="help" class="help">Enter a number (decimals and negatives allowed). Press Convert or Enter.</p>
+      </form>
+
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+
+    <footer class="note">
+      <strong>Demo tests:</strong> try 0°C → 32°F, 100°C → 212°F, 32°F → 0°C, 300K → 26.85°C
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
